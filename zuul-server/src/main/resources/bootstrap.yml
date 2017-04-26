@@ -1,0 +1,7 @@
+# Spring application
+spring:
+  application:
+    name: zuulserver
+  cloud:
+    config:
+      uri: http://localhost:8888
