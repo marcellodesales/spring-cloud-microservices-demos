@@ -4,12 +4,12 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.netflix.feign.EnableFeignClients;
-import org.springframework.stereotype.Controller;
+import org.springframework.cloud.netflix.hystrix.EnableHystrix;
 
 @SpringBootApplication
 @EnableEurekaClient
 @EnableFeignClients
-@Controller
+@EnableHystrix
 public class Demo2Application {
 
   public static void main(String[] args) {
