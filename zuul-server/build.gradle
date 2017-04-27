@@ -30,6 +30,11 @@ dependencies {
   compile('org.springframework.cloud:spring-cloud-starter-zuul')
   compile('org.springframework.cloud:spring-cloud-starter-eureka')
   compile 'org.springframework.cloud:spring-cloud-starter-config'
+
+  // Tracing
+  compile 'org.springframework.cloud:spring-cloud-starter-sleuth'
+  compile 'org.springframework.cloud:spring-cloud-sleuth-zipkin'
+
   compile("org.springframework.boot:spring-boot-actuator")
   testCompile('org.springframework.boot:spring-boot-starter-test')
 }
