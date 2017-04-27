@@ -18,21 +18,21 @@ public class AppController {
   private String appName;
 
   @Autowired
-  private Demo1Resource demo1App;
+  private Demo1ClientService appService;
 
   @Autowired
   private AppProperties myProperties;
 
   @RequestMapping(value = "/myname", method = RequestMethod.GET)
   public ResponseEntity<String> serveFeatureProperties() {
-    return new ResponseEntity<>(this.appName + " talking to " + this.demo1App.getMyName(),
+    return new ResponseEntity<>(this.appName + " talking to " + appService.getAppName(),
         HttpStatus.OK);
   }
 
   @RequestMapping(value = "/appProperties", method = RequestMethod.GET)
   public ResponseEntity<Map<String, AppProperties>> appProperties() {
     Map<String, AppProperties> allProps = new HashMap<>();
-    allProps.put("demo1", demo1App.getAppProperties());
+    allProps.put("demo1", appService.getAppProperties());
     allProps.put("demo2", this.myProperties);
     return new ResponseEntity<>(allProps, HttpStatus.OK);
   }
