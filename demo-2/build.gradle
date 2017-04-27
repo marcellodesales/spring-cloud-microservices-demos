@@ -32,7 +32,12 @@ dependencies {
   compile 'org.springframework.cloud:spring-cloud-starter-config'
   compile('org.springframework.cloud:spring-cloud-starter-hystrix')
   compile("org.springframework.boot:spring-boot-devtools")
+
+  // Provides support for the Actuators endpoint localhost:port/actuator with rendered output
   compile("org.springframework.boot:spring-boot-actuator")
+  runtime("org.springframework.data:spring-data-rest-hal-browser")
+  runtime("org.springframework.boot:spring-boot-starter-hateoas")
+
   compile("de.codecentric:spring-boot-admin-starter-client:1.5.0")
   testCompile('org.springframework.boot:spring-boot-starter-test')
 }

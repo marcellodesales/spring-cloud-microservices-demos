@@ -28,12 +28,18 @@ ext {
 dependencies {
   compile('org.springframework.boot:spring-boot-starter-web')
   compile("org.springframework.boot:spring-boot-devtools")
-  compile("org.springframework.boot:spring-boot-actuator")
+
   compile('org.springframework.cloud:spring-cloud-starter-eureka')
   compile 'org.springframework.cloud:spring-cloud-starter-feign' 
   compile 'org.springframework.cloud:spring-cloud-starter-config'
   compile("de.codecentric:spring-boot-admin-starter-client:1.5.0")
-    testCompile('org.springframework.boot:spring-boot-starter-test')
+
+  // Provides support for the Actuators endpoint localhost:port/actuator with rendered output
+  compile("org.springframework.boot:spring-boot-actuator")
+  runtime("org.springframework.data:spring-data-rest-hal-browser")
+  runtime("org.springframework.boot:spring-boot-starter-hateoas")
+
+  testCompile('org.springframework.boot:spring-boot-starter-test')
 }
 
 dependencyManagement {
