@@ -32,6 +32,9 @@ dependencies {
   compile('org.springframework.cloud:spring-cloud-starter-eureka')
   compile 'org.springframework.cloud:spring-cloud-starter-feign' 
   compile 'org.springframework.cloud:spring-cloud-starter-config'
+  compile 'org.springframework.cloud:spring-cloud-starter-sleuth'
+  compile 'org.springframework.cloud:spring-cloud-sleuth-zipkin'
+
   compile("de.codecentric:spring-boot-admin-starter-client:1.5.0")
 
   // Provides support for the Actuators endpoint localhost:port/actuator with rendered output

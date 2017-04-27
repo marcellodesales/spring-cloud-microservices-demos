@@ -21,27 +21,19 @@ repositories {
   mavenCentral()
 }
 
+
 ext {
   springCloudVersion = 'Dalston.RELEASE'
 }
 
 dependencies {
-  compile('org.springframework.boot:spring-boot-starter-web')
+  // https://github.com/spring-cloud/spring-cloud-sleuth#sleuth-with-zipkin-via-spring-cloud-stream
+  compile('io.zipkin.java:zipkin-server:1.23.2')
+  compile('io.zipkin.java:zipkin-autoconfigure-ui:1.23.2')
+
   compile('org.springframework.cloud:spring-cloud-starter-eureka')
-  compile 'org.springframework.cloud:spring-cloud-starter-feign' 
   compile 'org.springframework.cloud:spring-cloud-starter-config'
-  compile 'org.springframework.cloud:spring-cloud-starter-sleuth'
-  compile 'org.springframework.cloud:spring-cloud-sleuth-zipkin'
-
-  compile('org.springframework.cloud:spring-cloud-starter-hystrix')
-  compile("org.springframework.boot:spring-boot-devtools")
-
-  // Provides support for the Actuators endpoint localhost:port/actuator with rendered output
   compile("org.springframework.boot:spring-boot-actuator")
-  runtime("org.springframework.data:spring-data-rest-hal-browser")
-  runtime("org.springframework.boot:spring-boot-starter-hateoas")
-
-  compile("de.codecentric:spring-boot-admin-starter-client:1.5.0")
   testCompile('org.springframework.boot:spring-boot-starter-test')
 }
 
