@@ -1,0 +1,8 @@
+# Spring application
+spring:
+  application:
+    name: hystrixserver
+  cloud:
+    config:
+      uri: http://localhost:8888
+      fail-fast: true
