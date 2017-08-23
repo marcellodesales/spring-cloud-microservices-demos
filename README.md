@@ -4,9 +4,11 @@ Demos created during training
 
 * Spring Boot Apps
 * Spring Boot Actuators
-* Spring Cloud Feign Client
+* Spring Cloud Feign Client (Hytrix-ready Client)
 * Spring Cloud Config Server
-* Spring Cloud Sleuth (Distributed Tracing)
+* Spring Cloud Zuul (API Gateway)
+ * Spring Cloud Sleuth (Distributed Tracing)
+ * Zipkin Server (Trace visualizer)
 * Spring Cloud Registry/Discovery Server (Eureka)
 * Spring Boot Apps Admin
 * Spring Boot Tests: https://github.com/jwkidd3/boot_test
