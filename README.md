@@ -1,5 +1,9 @@
 # spring-cloud-microservices-demos
 
+* App based on https://12factor.net/
+
+# Servers
+
 Demos created during training
 
 * Spring Boot (`Base Framework`)
@@ -7,6 +11,7 @@ Demos created during training
   * Spring Cloud Feign Client (`Hytrix-enabled Clients`)
   * [Spring Boot Tests](https://github.com/jwkidd3/boot_test): (`Instance Tests`)
 * Spring Cloud Config Server (`Remote Configs in Github`)
+  * Config repo at https://github.com/marcellodesales/spring-cloud-microservices-demos-config
 * Spring Cloud Eureka Server (`Registry and Discovery Server`)
 * Spring Cloud Server Hystrix Dashboard (`Circuit Breaker Visualizer`)
 * Spring Cloud Zuul (`API Gateway`)
